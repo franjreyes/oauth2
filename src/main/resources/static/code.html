@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>OAuth PKCE</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="content">
+			<div class="nav"></div>
+			<div class="properties"></div>
+			<div class="action txt-center" id="code">
+
+			</div>
+		</div>
+		<script type="module">
+			import * as load from "./modules/nav-properties.js";
+			load.nav("code");
+			load.properties();
+			const params = new URLSearchParams(document.location.search);
+			const param = params.get("code");
+			let code = document.getElementById("code");
+			let h2 = document.createElement("h2");
+			h2.innerText = "code";
+			code.append(h2, param);
+		</script>
+	</body>
+</html>
