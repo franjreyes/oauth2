@@ -32,5 +32,8 @@ export const getToken = (code) => {
         .then(response => response.json())
         .then((response) => {
             window.sessionStorage.setItem('access_token', response.access_token);
+        })
+        .then(() => {
+            location.href = "token.html";
         });
 }

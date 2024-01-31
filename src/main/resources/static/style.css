@@ -32,36 +32,42 @@ body {
 
 .justify {
 	justify-content: space-between;
+	word-wrap: break-word;
 }
 
 .center {
 	justify-content: center;
+	word-wrap: break-word;
+}
+
+h1 {
+	margin: 2px;
+}
+
+.content div.mb-50, .mb-50 {
+	margin-bottom: 50px;
 }
 
 label, input, a, button {
 	margin: 2px;
-	padding: 5px;
-	border: solid 1px aqua;
+	padding: 10px;
 }
 
 label {
-	flex-basis: 250px;
+	flex-basis: 150px;
 }
 
 a {
 	text-align: center;
-	flex-basis: 250px;
-}
-
-button  {
-	max-width: 150px;
+	flex-basis: 150px;
+	border: solid 1px aqua;
 }
 
 input {
-	flex-basis: 600px;
+	flex-basis: 700px;
 }
 
-a:hover, button:hover, input:hover {
+a:hover {
   background-color: #ffffff;
 }
 
@@ -74,8 +80,11 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .dark {
-	text-align: center;
 	color: white;
 	background-color: #333;
 	font-size: 0.8rem;
+}
+
+.red {
+	color: red;
 }

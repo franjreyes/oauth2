@@ -8,12 +8,14 @@
 	<body>
 		<div class="content">
 			<div class="nav"></div>
-			<div class="properties"></div>
-			<div class="action"></div>
+			<div class="dark">
+				<div class="properties"></div>
+				<div class="action"></div>
+			</div>
 		</div>
 		<script type="module">
 			import * as load from "./modules/nav-properties.js";
-			load.nav("resource");
+			load.nav("token");
 			load.resourceProperties();
 			// load.resource();
 		</script>
