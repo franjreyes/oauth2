@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>OAuth PKCE</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="module">
+			import * as code from "./modules/code.js";
+			window.code = code;
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="nav"></div>
+			<div class="properties"></div>
+			<div class="action"></div>
+		</div>
+		<script type="module">
+			import * as load from "./modules/nav-properties.js";
+			load.nav("code");
+			load.properties();
+			load.code();
+		</script>
+	</body>
+</html>
