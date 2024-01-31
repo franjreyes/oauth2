@@ -4,7 +4,7 @@
 
 Open Authorization  es un estándar de autorización para compartir recursos de un usuario entre distintas aplicaciones sin necesidad de tener acceso a las credenciales del mismo. 
 
-La finalidad de OAuth es que un usuario pueda dar permisos a una aplicación para que acceda a sus datos o parte de ellos. Su uso está ampliamente extendido como en el caso de Google, X (Twitter) , GitHub, Instagram, Amazon, Microsoft (Account, Azure Active Directory), etc. 
+La finalidad de OAuth es permitir a un servicio acceder a datos de un usuario almacenados en otra aplicación. Su uso está ampliamente extendido como en el caso de Google, X (Twitter) , GitHub, Instagram, Amazon, Microsoft (Account, Azure Active Directory), etc. 
 
 Por ejemplo, si queremos publicar una foto en Facebook de nuestro móvil, esta última no tiene que conocer nuestras credenciales de Google para acceder a nuestras fotos. Hemos dado permiso a Facebook para que acceda a este recurso y así poder publicar nuestras fotos pero no tendría acceso a nuestro correo u otra información no autorizada. 
 
@@ -48,8 +48,11 @@ Refresh Token
 
 Flujo abstracto de protocolo: 
 
- 
+![img.png](img.png)
 
  
-
+Páginas de referencia
+https://oauth.net/2/
+https://fusionauth.io/articles/oauth/modern-guide-to-oauth
+https://www.spainclouds.com/blog/ejemplo-de-authorization-code-flow-de-oauth-2-0
  
