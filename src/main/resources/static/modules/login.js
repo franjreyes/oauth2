@@ -1,7 +1,7 @@
 import * as kc from "./keycloak.js";
 
 const login = () => {
-	location.href = kc.url + "/auth/realms/" + kc.realm + "/protocol/openid-connect/auth"
+	location.href = kc.url + "/realms/" + kc.realm + "/protocol/openid-connect/auth"
 	+ "?client_id=" + kc.client_id
 	+ "&response_type=code"
 	+ "&scope=" + kc.scope

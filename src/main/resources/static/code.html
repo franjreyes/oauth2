@@ -4,25 +4,22 @@
 		<meta charset="UTF-8">
 		<title>OAuth PKCE</title>
 		<link rel="stylesheet" href="style.css">
+		<script type="module">
+			import * as code from "./modules/code.js";
+			window.code = code;
+		</script>
 	</head>
 	<body>
 		<div class="content">
 			<div class="nav"></div>
 			<div class="properties"></div>
-			<div class="action txt-center" id="code">
-
-			</div>
+			<div class="action"></div>
 		</div>
 		<script type="module">
 			import * as load from "./modules/nav-properties.js";
 			load.nav("code");
-			load.properties();
-			const params = new URLSearchParams(document.location.search);
-			const param = params.get("code");
-			let code = document.getElementById("code");
-			let h2 = document.createElement("h2");
-			h2.innerText = "code";
-			code.append(h2, param);
+			load.propertiesToken();
+			load.code();
 		</script>
 	</body>
 </html>

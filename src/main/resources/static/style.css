@@ -7,12 +7,16 @@ body {
 
 .content {
 	margin: 0 auto;
-	max-width: 1200px;
+	max-width: 900px;
 	padding: 2rem;
 }
 
 .content div {
-	margin: 5px;
+	margin: 1px;
+	padding: 2px;
+}
+
+.content div.action {
 	padding: 5px;
 }
 
@@ -26,27 +30,35 @@ body {
 	flex-direction: row;
 }
 
+.justify {
+	justify-content: space-between;
+}
+
 .center {
 	justify-content: center;
 }
 
 label, input, a, button {
-	margin: 5px;
+	margin: 2px;
 	padding: 5px;
 	border: solid 1px aqua;
 }
 
 label {
-	flex-basis: 200px;
+	flex-basis: 250px;
 }
 
-a, button {
+a {
 	text-align: center;
-	flex-basis: 200px;
+	flex-basis: 250px;
+}
+
+button  {
+	max-width: 150px;
 }
 
 input {
-	flex-basis: 420px;
+	flex-basis: 600px;
 }
 
 a:hover, button:hover, input:hover {
@@ -57,14 +69,13 @@ a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
 
-#code {
-	border: solid 1px aqua;
-}
-
 .selected {
 	background-color: aqua;
 }
 
-.txt-center {
+.dark {
 	text-align: center;
+	color: white;
+	background-color: #333;
+	font-size: 0.8rem;
 }
