@@ -50,4 +50,5 @@ Refresh Token
 - https://oauth.net/2/
 - https://fusionauth.io/articles/oauth/modern-guide-to-oauth
 - https://www.spainclouds.com/blog/ejemplo-de-authorization-code-flow-de-oauth-2-0
+- https://www.youtube.com/watch?v=66Z6nFzLTos
  

@@ -6,9 +6,9 @@ export const getToken = (code) => {
         "code":code,
         "redirect_uri":kc.redirect_uri,
         "client_id":kc.client_id,
-        "scope":kc.scope,
-        "client_secret":kc.client_secret,
-        "code_verifier":kc.code_verifier
+         "scope":kc.scope,
+         // "client_secret":kc.client_secret,        
+         "code_verifier":kc.code_verifier
     }
     let formBody = [];
     for(let property in _body) {

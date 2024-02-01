@@ -5,7 +5,7 @@ const login = () => {
 	+ "?client_id=" + kc.client_id
 	+ "&response_type=code"
 	+ "&scope=" + kc.scope
-	+ "&redirect_uri=" + kc.redirect_uri
+	+ "&redirect_uri=" + kc.redirect_uri;
 	+ "&state=" + kc.state
 	+ "&code_challenge=" + kc.code_challenge
 	+ "&code_challenge_method=S256";

@@ -35,8 +35,8 @@ export function tokenProperties() {
 	div.append(createDiv(createLabel("client_id"), createInput("client_id", kc.client_id),"flex-row","justify"));
 	div.append(createDiv(createLabel("scope"), createInput("scope", kc.scope),"flex-row","justify"));
 	div.append(createDiv(createLabel("redirect_uri"), createInput("redirect_uri", kc.redirect_uri),"flex-row","justify"));
-	div.append(createDiv(createLabel("client_secret"), createInput("client_secret", kc.client_secret), "flex-row","justify"));
 	div.append(createDiv(createLabel("code_verifier"), createInput("code_verifier", kc.code_verifier), "flex-row","justify"));
+	//div.append(createDiv(createLabel("client_secret"), createInput("client_secret", kc.client_secret), "flex-row","justify"));
 }
 
 export function resourceProperties() {
