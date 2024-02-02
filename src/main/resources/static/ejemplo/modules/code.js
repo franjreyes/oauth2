@@ -5,10 +5,10 @@ export const getToken = (code) => {
         "grant_type":"authorization_code",
         "code":code,
         "redirect_uri":kc.redirect_uri,
-        "client_id":kc.client_id,
-         "scope":kc.scope,
-         // "client_secret":kc.client_secret,        
-         "code_verifier":kc.code_verifier
+        "client_id":kc.client_id
+        //"scope":kc.scope
+        // "client_secret":kc.client_secret,        
+        //"code_verifier":kc.code_verifier
     }
     let formBody = [];
     for(let property in _body) {
@@ -18,8 +18,8 @@ export const getToken = (code) => {
     }
     formBody = formBody.join("&");
 
-    fetch(`${kc.url}/realms/${kc.realm}/protocol/openid-connect/token`,
-        {
+    fetch(`${kc.url}/realms/${kc.realm}/protocol/openid-connect/token`, 
+    	{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
@@ -27,8 +27,7 @@ export const getToken = (code) => {
                 'Connection': 'keep-alive'
             },
             body: formBody
-        }
-    )
+        })
         .then(response => response.json())
         .then((response) => {
             window.sessionStorage.setItem('access_token', response.access_token);

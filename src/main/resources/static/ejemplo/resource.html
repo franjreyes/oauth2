@@ -4,6 +4,11 @@
 		<meta charset="UTF-8">
 		<title>OAuth PKCE</title>
 		<link rel="stylesheet" href="style.css">
+		<script type="module">
+			import * as resource from "./modules/resource.js";
+			window.resource = resource;
+		</script>
+		
 	</head>
 	<body>
 		<div class="content">
@@ -15,9 +20,8 @@
 		</div>
 		<script type="module">
 			import * as load from "./modules/nav-properties.js";
-			load.nav("token");
-			load.resourceProperties();
-			// load.resource();
+			load.nav("resource");
+			load.resources();
 		</script>
 	</body>
 </html>

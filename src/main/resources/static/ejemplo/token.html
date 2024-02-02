@@ -5,8 +5,8 @@
 		<title>OAuth PKCE</title>
 		<link rel="stylesheet" href="style.css">
 		<script type="module">
-			import {login} from "./modules/login.js";
-			window.login = login;
+			import * as token from "./modules/token.js";
+			window.token = token;
 		</script>
 	</head>
 	<body>
@@ -14,17 +14,13 @@
 			<div class="nav"></div>
 			<div class="dark">
 				<div class="properties"></div>
-				<div class="action">
-					<div class="flex-row center dark">
-						<button onclick="login()">Obtener Authorization code</button>
-					</div>
-				</div>
+				<div class="action"></div>
 			</div>
 		</div>
 		<script type="module">
 			import * as load from "./modules/nav-properties.js";
-			load.nav("index");
-			load.properties();
-		</script>		
+			load.nav("token");
+			token.tokenYPayload();
+		</script>
 	</body>
 </html>

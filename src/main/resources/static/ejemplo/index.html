@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>OAuth PKCE</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="module">
+			import {login} from "./modules/index.js";
+			window.login = login;
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="nav"></div>
+			<div class="dark">
+				<div class="properties"></div>
+				<div class="action">
+					<div class="flex-row center dark">
+						<button onclick="login()">Obtener Authorization code</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module">
+			import * as load from "./modules/nav-properties.js";
+			load.nav("index");
+			load.properties();
+		</script>		
+	</body>
+</html>
