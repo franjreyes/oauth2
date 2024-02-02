@@ -15,9 +15,10 @@ final class CustomJwtGrantedAuthoritiesConverter implements Converter<Jwt, Colle
     @Override
     @SuppressWarnings("unchecked")
     public Collection<GrantedAuthority> convert(Jwt jwt) {
-    	var realmAccess = (Map<String, List<String>>) jwt.getClaim("realm_access");
+    	var realmAccess = (Map<String, List<String>>) jwt.getClaim("resource_access");
+    	var client = (Map<String, List<String>>) realmAccess.get("pkce-client");
 
-        return realmAccess.get("roles").stream()
+        return client.get("roles").stream()
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
                 .collect(Collectors.toList());
     }

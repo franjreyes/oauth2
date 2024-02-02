@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OAuthController {
 
 	@GetMapping("user")
-	
+	@PreAuthorize("hasRole('USER')")
 	public String getUser() {
 		return "Respuesta Usuario";
 	}
