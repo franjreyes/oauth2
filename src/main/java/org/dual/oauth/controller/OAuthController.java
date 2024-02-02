@@ -16,7 +16,6 @@ public class OAuthController {
 	}
 	
 	@GetMapping("admin")
-	@PreAuthorize("hasRole('ADMIN')")
 	public String getAdmin() {
 		return "Respuesta Administrador";
 	}
